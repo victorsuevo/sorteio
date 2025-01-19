@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.gif-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeCycle 4s infinite ease-in-out;
+}
+
+.gif1 {
+    background-image: url('numeros.gif');
+    animation-delay: 0s; 
+}
+
+.gif2 {
+    background-image: url('numeros.gif');
+    animation-delay: 2s; 
+}
+
+@keyframes fadeCycle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+h1 {
+    font-size: 25pt;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+label {
+    font-size: 19pt;
+    margin: 10px 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+div {
+    background-color: rgba(58, 124, 185, 0.9);
+    border-radius: 9px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    animation: slideIn 1s ease-in-out;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input.button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 15pt;
+    width: 100px;
+    margin-left: 30px;
+}
+
+input.button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+div#resultado {
+    background-color: azure;
+    color: rgb(79, 79, 204);
+    padding: 15px;
+    margin-top: 550px;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+    position: absolute;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}

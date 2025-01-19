@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="app.js" defer></script>
+    <title>Jogo dos Números</title>
+</head>
+<body>
+    <div class="gif-container">
+        <div class="gif gif1"></div>
+        <div class="gif gif2"></div>
+    </div>
+    <div>
+        <h1>Jogo dos Números</h1>
+        <label for="length">Quantos números você deseja sortear?
+        </label>
+        <input id="length" name="length" type="number" min="1">
+        <label for="min">Qual é o intervalo mínimo? </label>
+        <input id="min" name="min" type="number">
+        <label for="max">Qual é o intervalo máximo?</label>
+        <input id="max" name="max" type="number">
+        <input class="button" type="button" value="Gerar" onclick="gerar()">
+        <input class="button" type="button" value="Reiniciar" onclick="window.location.reload()">
+    </div>
+    <div id="resultado"></div>
+</body>
+</html>
